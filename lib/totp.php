@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright (c) 2011 Le Lag 
+ * Copyright (c) 2011 Le Lag
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -20,15 +20,16 @@
  * THE SOFTWARE.
  */
 
-namespace OTPHP {
+#comment out namespace for php 5.2
+#namespace OTPHP {
   /**
-   * TOTP - One time password generator 
-   * 
-   * The TOTP class allow for the generation 
-   * and verification of one-time password using 
+   * TOTP - One time password generator
+   *
+   * The TOTP class allow for the generation
+   * and verification of one-time password using
    * the TOTP specified algorithm.
    *
-   * This class is meant to be compatible with 
+   * This class is meant to be compatible with
    * Google Authenticator
    *
    * This class was originally ported from the rotp
@@ -48,9 +49,9 @@ namespace OTPHP {
     }
 
     /**
-     *  Get the password for a specific timestamp value 
+     *  Get the password for a specific timestamp value
      *
-     *  @param integer $timestamp the timestamp which is timecoded and 
+     *  @param integer $timestamp the timestamp which is timecoded and
      *  used to seed the hmac hash function.
      *  @return integer the One Time Password
      */
@@ -59,7 +60,7 @@ namespace OTPHP {
     }
 
     /**
-     *  Get the password for the current timestamp value 
+     *  Get the password for the current timestamp value
      *
      *  @return integer the current One Time Password
      */
@@ -70,7 +71,7 @@ namespace OTPHP {
     /**
      * Verify if a password is valid for a specific counter value
      *
-     * @param integer $otp the one-time password 
+     * @param integer $otp the one-time password
      * @param integer $timestamp the timestamp for the a given time, defaults to current time.
      * @return  bool true if the counter is valid, false otherwise
      */
@@ -82,7 +83,7 @@ namespace OTPHP {
 
     /**
      * Returns the uri for a specific secret for totp method.
-     * Can be encoded as a image for simple configuration in 
+     * Can be encoded as a image for simple configuration in
      * Google Authenticator.
      *
      * @param string $name the name of the account / profile
@@ -103,4 +104,4 @@ namespace OTPHP {
     }
   }
 
-}
+#}
